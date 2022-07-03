@@ -17,7 +17,12 @@ const NotificationRoute = require("./Routes/NotificationRoute")
 app.use("/user",UserRoute);
 app.use("/verification",NotificationRoute)
 
-
+app.get("/",(req,res)=>{
+    res.status(200).json({
+        message:"Hey leave",
+        status:200
+    })
+})
 app.listen(port, () => {
     console.log(`My Server is running on http://localhost:${port}`);
    }) 

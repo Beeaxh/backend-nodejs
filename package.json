@@ -4,7 +4,8 @@
   "description": "save in crypto",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon index.js",
+    "start":"node index.js"
   },
   "author": "chimdi",
   "license": "ISC",
