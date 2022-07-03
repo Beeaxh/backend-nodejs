@@ -1,0 +1,5 @@
+URI=mongodb://localhost:27017/users
+AUTH_PASS_EMAIL = axgurah@gmail.com
+AUTH_PASS_PASSWORD = chimdindu@2
+AUTH_KEY = e804e7165amsh45247fc41da844fp1c4598jsn5d149daaddb6
+AUTH_URI = 

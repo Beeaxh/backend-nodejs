@@ -1,0 +1,94 @@
+POST http://localhost:5099/user/register
+Content-Type: application/json
+
+{
+    "username":"Chimdindu",
+    "fullname":"Ezechukwu Divine",
+    "email":"chimdi4332@gmail.com",
+    "phone_number":"09161911394",
+    "password":"common@2",
+    "c_password":"common@2"
+}
+###
+GET http://localhost:5099/user/all
+
+###
+GET http://localhost:5099/user/delete/chimdi4332@gmail.com
+
+###
+POST http://localhost:5099/user/verify-otp
+Content-Type: application/json
+
+{
+    "otp":"236171",
+    "ide":"60871e1f-2e2e-4cdc-a4da-3a59107b9d3e"
+}
+
+###
+POST http://localhost:5099/user/resendOtp
+Content-Type: application/json
+
+{
+    "id":"89d75649-c0cc-476b-9571-698d30c0e3df",
+    "email":"chimdi4332@gmail.com"
+}
+###
+POST http://localhost:5099/user/password-reset
+Content-Type: application/json
+
+{
+    "ide":"117ae1bf-2712-4538-93c5-27605feb2486",
+    "email":"uche@gmail.com",
+    "newpassword":"",
+    "password":"common@2"
+}
+###
+POST http://localhost:5099/user/enable-email
+Content-Type: application/json
+
+{
+    "bool":true,
+    "ide":""
+}
+###
+POST http://localhost:5099/user/update-username
+Content-Type: application/json
+
+{
+    "ide":"",
+    "email":"",
+    "password":"",
+    "newUsername":""
+}
+###
+GET http://localhost:5099/user/generate-pass
+###
+GET http://localhost:5099/user/generated-pass
+
+###
+POST  http://localhost:5099/user/log-user/2466
+Content-Type: application/json
+
+{
+    "username":"Chimdindu",
+    "password":"common@2"
+}
+###
+POST http://localhost:5099/user/buy-crypto
+Content-Type: application/json
+
+{
+    "name":"eth",
+    "amount":"3",
+    "username":"Chimdindu",
+    "ide":"60871e1f-2e2e-4cdc-a4da-3a59107b9d3e",
+    "password":"common@2"
+}
+###
+POST http://localhost:5099/user/balanceOf
+Content-Type: application/json
+
+{
+    "name":"eth",
+    "address":"0xF1FBe45515666161CA17a9706Af3581db69c07a1"
+}
