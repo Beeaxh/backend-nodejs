@@ -9,10 +9,13 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 const mongoose = require("mongoose");
 app.use(cookie())
-mongoose.connect(process.env.AUTH_URI);
+//mongodb+srv://Axgura:axgura@123@cluster0.ymike.mongodb.net/BEEAXH?retryWrites=true&w=majority
+mongoose.connect("mongodb+srv://chimdindu:chimdidivine@cluster0.ymike.mongodb.net/?retryWrites=true&w=majority");
 //||'mongodb://localhost:27017/users'
 const port = process.env.PORT || 5099;
-require("./Database/db");
+const db = mongoose.connection
+db.on("error",(err)=>{console.log(err)})
+db.once("open",()=> console.log("Connected to database"))
 const UserRoute = require("./Routes/UserRoute");
 const NotificationRoute = require("./Routes/NotificationRoute")
 app.use("/user",UserRoute);
